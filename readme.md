@@ -33,4 +33,4 @@ Now, create a virtual environment within the project directory by typing
 ## run django project
 > python manage.py runserver
 
-go to (http://127.0.0.1:8000) 可以看到server已被架好
+ (http://127.0.0.1:8000) 可以看到server已被架好

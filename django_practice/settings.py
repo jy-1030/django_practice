@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'quiz.apps.QuizConfig', #將quiz.apps.QuizConfig(每個app都是使用路徑做描述)加進INSTALLED_APPS
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

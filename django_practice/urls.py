@@ -18,9 +18,16 @@ from django.contrib import admin
 from django.urls import path, include
 
 import quiz.views
+from quiz import views
+
+# urlpatterns = [
+#     # path('quiz/', quiz.views.index),
+#     path('quiz/', include('quiz.urls')),
+#     path('admin/', admin.site.urls),
+#     path('', views.homepage)
+# ]
 
 urlpatterns = [
-    # path('quiz/', quiz.views.index),
-    path('quiz/', include('quiz.urls')),
-    path('admin/', admin.site.urls),
+    path('play', views.play),
+    # path('results/', views.answer_count),
 ]

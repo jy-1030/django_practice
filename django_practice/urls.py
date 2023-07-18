@@ -20,14 +20,16 @@ from django.urls import path, include
 import quiz.views
 from quiz import views
 
-# urlpatterns = [
-#     # path('quiz/', quiz.views.index),
-#     path('quiz/', include('quiz.urls')),
-#     path('admin/', admin.site.urls),
-#     path('', views.homepage)
-# ]
-
 urlpatterns = [
-    path('play', views.play),
-    # path('results/', views.answer_count),
+    # path('quiz/', quiz.views.index),
+    path('quiz/', include('quiz.urls')),
+    path('admin/', admin.site.urls),
+    path('', views.homepage),
+    path('play/', views.play),
+    path('results/', views.result),
 ]
+
+# urlpatterns = [
+#     path('play', views.play),
+#     path('results', views.result),
+# ]

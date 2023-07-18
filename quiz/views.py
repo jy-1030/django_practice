@@ -1,7 +1,7 @@
 import datetime
 
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from quiz.models import Question
 
 
@@ -23,4 +23,18 @@ def homepage(request):
 
 def play(request):
     question = Question.objects.all()
+    if request.method == 'POST':  # when user click 'submit btn'
+        total = []
+        for q in question:
+            select = request.POST[str(q.id)]
+            choice = q.choice_set.all().values()
+            for i in choice:
+                if i['choice_text'] == select:
+                    total.append(i['score'])
+        return redirect(result, total=sum(total))
     return render(request, 'play.html', {'question': question})
+
+
+def result(request, total):
+    score = total
+    return render(request, 'result.html', {'score':score})

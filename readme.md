@@ -51,3 +51,7 @@ Now, create a virtual environment within the project directory by typing
 > 
 
 > $python manage.py migrate   #變動資料庫。
+>
+---
+quiz test 畫面
+![image] (https://github.com/jy-1030/django_practice/blob/master/image.png)

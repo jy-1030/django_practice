@@ -54,4 +54,4 @@ Now, create a virtual environment within the project directory by typing
 >
 ---
 quiz test 畫面
-![image] (https://github.com/jy-1030/django_practice/blob/master/image.png)
+![[image](https://github.com/jy-1030/django_practice/blob/master/image.png)] 
